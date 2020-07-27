@@ -353,7 +353,7 @@ PrefabInstance:
     - target: {fileID: 4587196634900633693, guid: 42fea3f31c6584b879fa154b7a71248e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4587196634900633693, guid: 42fea3f31c6584b879fa154b7a71248e,
         type: 3}
@@ -458,7 +458,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &492365000
 Rigidbody2D:
@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61a7f3d40c484cd98b7744ac566f546, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidbody2D: {fileID: 0}
+  myRigidBody: {fileID: 0}
   boundCheck: {fileID: 0}
   boundCheckRadius: 0
   whatIsBound:
@@ -649,12 +649,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.8, y: 3, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.7999997, y: 3, z: -10}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &839959071
 GameObject:
@@ -1014,7 +1014,7 @@ PrefabInstance:
     - target: {fileID: 4587196634900633693, guid: 42fea3f31c6584b879fa154b7a71248e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4587196634900633693, guid: 42fea3f31c6584b879fa154b7a71248e,
         type: 3}

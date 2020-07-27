@@ -7,7 +7,7 @@ public class PlayerController: MonoBehaviour
 
 
     private float moveSpeed;
-    public Rigidbody2D rigidbody2D;
+    public Rigidbody2D myRigidBody;
 
     // bound stuff
     public Transform boundCheck;
@@ -23,7 +23,7 @@ public class PlayerController: MonoBehaviour
     void Start()
     {
         moveSpeed = 10;
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        myRigidBody = GetComponent<Rigidbody2D>();
         responPosition = transform.position;
 
         
@@ -34,22 +34,8 @@ public class PlayerController: MonoBehaviour
     {
 
         Movement();
-        //// player Movmement;
-        //if (Input.GetAxisRaw("Horizontal") > 0f)
-        //{
-        //    rigidbody2D.velocity = new Vector3(moveSpeed, rigidbody2D.velocity.y, 0f);
-        //    transform.localScale = new Vector3(1f, 1f, 1f);
+      
 
-        //}
-        //else if (Input.GetAxisRaw("Horizontal") < 0f)
-        //{
-        //    rigidbody2D.velocity = new Vector3(-moveSpeed, rigidbody2D.velocity.y, 0f);
-        //    transform.localScale = new Vector3(-1f, 1f, 1f);
-
-        //}
-        //else {
-        //    rigidbody2D.velocity = new Vector3(0f, rigidbody2D.velocity.y, 0f);
-        //}
     }
 
     private void Movement() {
@@ -58,34 +44,34 @@ public class PlayerController: MonoBehaviour
         
         if (Input.GetAxisRaw("Horizontal") > 0f)
         {
-            rigidbody2D.velocity = new Vector3(moveSpeed, rigidbody2D.velocity.y, 0f);
+            myRigidBody.velocity = new Vector3(moveSpeed, myRigidBody.velocity.y, 0f);
             transform.localScale = new Vector3(1f, 1f, 1f);
 
         }
         else if (Input.GetAxisRaw("Horizontal") < 0f)
         {
-            rigidbody2D.velocity = new Vector3(-moveSpeed, rigidbody2D.velocity.y, 0f);
+            myRigidBody.velocity = new Vector3(-moveSpeed, myRigidBody.velocity.y, 0f);
             transform.localScale = new Vector3(-1f, 1f, 1f);
 
         }
         else
         {
-            rigidbody2D.velocity = new Vector3(0f, rigidbody2D.velocity.y, 0f);
+            myRigidBody.velocity = new Vector3(0f, myRigidBody.velocity.y, 0f);
         }
 
         if (Input.GetAxisRaw("Vertical") > 0f)
         {
-            rigidbody2D.velocity = new Vector3(rigidbody2D.velocity.x, moveSpeed, 0f);
+            myRigidBody.velocity = new Vector3(myRigidBody.velocity.x, moveSpeed, 0f);
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
         else if (Input.GetAxisRaw("Vertical") < 0f)
         {
-            rigidbody2D.velocity = new Vector3(rigidbody2D.velocity.x, -moveSpeed, 0f);
+            myRigidBody.velocity = new Vector3(myRigidBody.velocity.x, -moveSpeed, 0f);
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
         else {
-            rigidbody2D.velocity = new Vector3(rigidbody2D.velocity.x, 0f, 0f);
-            transform.localScale = new Vector3 (1f, 1f, 1f);
+            myRigidBody.velocity = new Vector3(myRigidBody.velocity.x, 0f, 0f);
+            transform.localScale = new Vector3 (1f, 1f, 0f);
         }
 
     }
